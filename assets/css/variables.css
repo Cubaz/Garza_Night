@@ -1,0 +1,28 @@
+/* variables.css · Paleta, tipografía y medidas. Se cambia el diseño desde aquí. */
+:root {
+  /* Colores */
+  --fondo:        #FAF8FF;
+  --superficie:   #FFFFFF;
+  --oscuro:       #1B1530;   /* hero, textos principales */
+  --violeta:      #6D4FC2;   /* color principal */
+  --violeta-osc:  #5B3FB0;   /* hover */
+  --rosa:         #B14A82;   /* acento */
+  --azul:         #1F7FB0;   /* enlaces */
+  --texto:        #1B1530;
+  --texto-suave:  #5E5873;
+  --borde:        #E6E1F3;
+  --borde-fuerte: #D9D3EA;
+  --exito:        #1E7F5C;
+  --error:        #B3261E;
+
+  /* Tipografía */
+  --fuente-titulos: 'Space Grotesk', system-ui, sans-serif;
+  --fuente-texto:   'Inter', system-ui, sans-serif;
+
+  /* Medidas */
+  --radio:      10px;
+  --radio-sm:   6px;
+  --ancho-max:  1200px;
+  --espacio:    24px;
+  --transicion: 0.2s ease;
+}

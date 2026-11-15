@@ -1,0 +1,71 @@
+/* base.css · Reglas generales: reinicio, tipografía, botones y formularios. */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: var(--fuente-texto);
+  font-size: 16px;
+  line-height: 1.55;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3 { font-family: var(--fuente-titulos); line-height: 1.15; margin: 0 0 .5em; }
+h1 { font-size: clamp(2rem, 5vw, 3rem); }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.25rem; }
+p  { margin: 0 0 1em; }
+a  { color: var(--azul); }
+img { max-width: 100%; display: block; }
+
+.contenedor-principal {
+  flex: 1;
+  width: 100%;
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  padding: var(--espacio);
+}
+
+/* Accesibilidad: foco visible y movimiento reducido */
+:focus-visible { outline: 3px solid var(--violeta); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 2px solid var(--violeta);
+  border-radius: var(--radio-sm);
+  background: var(--violeta);
+  color: #fff;
+  font: 700 16px var(--fuente-titulos);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--transicion), border-color var(--transicion);
+}
+.btn:hover { background: var(--violeta-osc); border-color: var(--violeta-osc); }
+.btn-borde { background: transparent; color: var(--violeta); }
+.btn-borde:hover { background: #EFEAFB; color: var(--violeta-osc); }
+.btn-sm { padding: 8px 18px; font-size: 15px; }
+.btn[disabled] { opacity: .5; cursor: not-allowed; }
+
+/* Formularios */
+.campo { margin-bottom: 18px; }
+.campo label { display: block; font-weight: 600; margin-bottom: 6px; }
+.campo small { display: block; color: var(--texto-suave); margin-top: 4px; }
+.input {
+  width: 100%;
+  padding: 11px 12px;
+  background: var(--superficie);
+  color: var(--texto);
+  border: 1px solid var(--borde-fuerte);
+  border-radius: var(--radio-sm);
+  font: 400 15px var(--fuente-texto);
+}
+.input:focus { border-color: var(--violeta); }
+.input.invalido { border-color: var(--error); }
+.error-campo { color: var(--error); font-size: 14px; margin-top: 4px; }
+.form-inline { display: inline; margin: 0; }
