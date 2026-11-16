@@ -8,6 +8,7 @@
  */
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/funciones.php';
+require_once __DIR__ . '/social.php';
 
 $titulo_completo = isset($titulo) ? $titulo . ' · ' . APP_NOMBRE : APP_NOMBRE;
 $u = usuario_actual();
@@ -46,7 +47,7 @@ $u = usuario_actual();
       <a href="<?= BASE_URL ?>/perfil.php">Perfil</a>
       <?php if (es_admin()): ?><a href="<?= BASE_URL ?>/admin/index.php">Admin</a><?php endif; ?>
       <span class="menu-usuario">
-        <span class="avatar" aria-hidden="true"><?= e(iniciales($u['nombre'])) ?></span>
+        <?= avatar_html($u['nombre']) ?>
         <?= e($u['nombre']) ?>
       </span>
       <form method="post" action="<?= BASE_URL ?>/logout.php" class="form-inline">
