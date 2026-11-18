@@ -9,7 +9,7 @@
 const DB_HOST = 'localhost';
 const DB_NAME = 'garza_night';
 const DB_USER = 'root';
-const DB_PASS = '';          // XAMPP trae el usuario root sin contraseña
+const DB_PASS = 'root';          // XAMPP trae el usuario root sin contraseña
 
 // --- Sitio ---
 const APP_NOMBRE = 'Garza Night';
